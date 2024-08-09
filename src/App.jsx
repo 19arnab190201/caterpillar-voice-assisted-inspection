@@ -12,8 +12,9 @@ function App() {
     <UserContextProvider>
       <Routes>
         <Route path='/' element={<HomePage />} />
+        <Route path='/dashboard' element={<DashboardPage />} />
         <Route element={<ProtectedRoute />}>
-          <Route path='/dashboard' element={<DashboardPage />} />
+         
           <Route path='/profile' element={<ProfilePage />} />
         </Route>
       </Routes>
