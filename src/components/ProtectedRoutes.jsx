@@ -5,16 +5,14 @@ import { useAuthContext } from "../hooks/useAuthContext";
 import Navbar from "./Navbar";
 
 function ProtectedRoute() {
-  const { user, isTokenExpired, logout } = useAuthContext();
-
-  if (!user || isTokenExpired()) {
-    logout();
+  const { user, isTokenExpired } = useAuthContext();
+  console.log("user", user);
+  if (!user) {
     return <Navigate to='/' />;
   }
 
   return (
     <>
-      <Navbar />
       <Outlet />
     </>
   );

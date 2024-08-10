@@ -10,22 +10,9 @@ const UserContext = createContext(INITIAL_STATE);
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "login": {
-      const { username, password, token } = action.payload;
-      if (validateCredentials(username, password)) {
-        return {
-          ...state,
-          hasLoginError: false,
-          user: { username, token }, // assign user and token here
-        };
-      }
-      return {
-        ...state,
-        hasLoginError: true,
-        user: null,
-      };
-    }
-    case "logout":
+    case "LOGIN":
+      return { user: action.payload };
+    case "LOGOUT":
       return {
         ...state,
         user: null,
@@ -36,24 +23,16 @@ const reducer = (state, action) => {
 };
 
 const UserContextProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
+  const [state, dispatch] = useReducer(reducer, {
+    user: JSON.parse(localStorage.getItem("catInspection")) || null,
+  });
 
-  const login = (username, password) => {
-    // Assume validateCredentials returns a token if valid
-    const token = validateCredentials(username, password);
-    if (token) {
-      dispatch({ type: "login", payload: { username, password, token } });
-    } else {
-      dispatch({ type: "login", payload: { username, password } });
-    }
-  };
-
-  const logout = () => {
-    dispatch({ type: "logout" });
-  };
+  // const logout = () => {
+  //   dispatch({ type: "logout" });
+  // };
 
   return (
-    <UserContext.Provider value={{ ...state, login, logout }}>
+    <UserContext.Provider value={{ ...state, dispatch }}>
       {children}
     </UserContext.Provider>
   );

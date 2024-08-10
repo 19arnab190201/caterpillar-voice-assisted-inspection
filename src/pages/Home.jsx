@@ -1,7 +1,14 @@
 import React from "react";
-
-function Home() {
-  return <h1>Welcome to the Home Page</h1>;
-}
+import logo from "../assets/Logo.png";
+import bodyImage from "../assets/hero.png";
+import sideImage from "../assets/bul.png";
+import styles from "./Home.module.css";
+const Home = () => {
+  return (
+    <div>
+      <h1 className={styles.heading}>Mujhe Ghar jaana hai</h1>
+    </div>
+  );
+};
 
 export default Home;
