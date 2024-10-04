@@ -294,8 +294,12 @@ const CreateInspection = () => {
     };
 
     recognition.onresult = (event) => {
-      const spokenAnswer =
+      let spokenAnswer =
         event.results[event.results.length - 1][0].transcript.trim();
+        if (spokenAnswer.endsWith('.')) {
+          spokenAnswer = spokenAnswer.slice(0, -1);
+      }
+      
       console.log("I am", spokenAnswer);
 
       if (
