@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+
+.conta {
+  margin: 0; /* Remove default margin */
+  background-image: url("../assets/logbg.png");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.login-header {
+  position: fixed; /* Fixes the header at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure the header spans the full width */
+  height: 10vh; /* Adjust the height of the header */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px; /* Optional: Add padding to the header */
+  z-index: 1000; /* Ensure the header stays above other elements */
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the logo within the navbar */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start fully transparent */
+    transform: translateY(-30px); /* Start slightly above */
+  }
+  to {
+    opacity: 1; /* End fully opaque */
+    transform: translateY(0); /* End at original position */
+  }
+}
+
+.login-logo {
+  max-width: 150px; /* Adjust the size of the logo */
+  height: auto;
+  display: block; /* Ensure it’s treated as a block element */
+  margin-top: 60px;
+  animation: fadeIn 2s ease-in-out; /* Apply the fade-in animation */
+}
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  animation: fadeIn 0.5s ease-in; /* Add fade-in animation */
+  background: rgba(
+    203,
+    201,
+    201,
+    0.44
+  ); /* Translucent background at 44% opacity */
+  margin-top: 100px;
+  padding: 30px;
+  border-radius: 30px;
+  width: 30%;
+  height: 70%;
+  text-align: center;
+  backdrop-filter: blur(3px); /* Background blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
+}
+
+/* Hover effect */
+.login-form:hover {
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.welcome-text {
+  font-size: 45px;
+  color: #3a3a3a;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+  font-family: "Bebas Neue";
+}
+
+.input-group {
+  margin-bottom: 15px;
+  position: relative;
+  font-family: "Raleway"; /* Apply Raleway font */
+}
+
+.input-group input {
+  font-family: "Raleway", sans-serif; /* Apply Raleway font */
+  color: #3a3a3a;
+  width: 90%;
+  margin-top: 15px;
+  padding: 12px 10px 12px 10px;
+  border-radius: 30px;
+  border: 1px solid #ccc; /* Add subtle border */
+  background: #f9f9f9;
+  font-size: 18px;
+  font-weight: bold; /* Make the text bold */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Initial shadow */
+  transition: border-color 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect */
+.input-group input:hover {
+  border-color: #3a3a3a; /* Change border color on hover */
+  background: #e8e8e8; /* Change background color on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Focus effect (optional) */
+.input-group input:focus {
+  outline: none; /* Remove default outline */
+  border-color: #3a3a3a; /* Change border color on focus */
+  box-shadow: 0 0 8px rgba(58, 58, 58, 0.3); /* Highlight effect on focus */
+}
+
+/* Style for the placeholder */
+.input-group input::placeholder {
+  padding-left: 20px;
+  color: #3a3a3a; /* Change placeholder color */
+  font-weight: bold; /* Attempt to make placeholder bold */
+}
+
+.input-group .icon {
+  position: absolute;
+  right: 35px;
+  top: 65%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.login-button {
+  font-family: "Raleway";
+  font-weight: bold;
+  width: 90%;
+  margin-top: 15px;
+  padding: 12px 10px 12px 10px;
+  border-radius: 30px;
+  border: none;
+  background-color: #3a3a3a;
+  color: #ffc401;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.6s ease, transform 0.6s ease; /* Added transition for smooth transformation */
+}
+
+.login-button:hover {
+  background-color: #ffc401;
+  color: #3a3a3a;
+}
+
+.login-options {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-options a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.login-options a:hover {
+  text-decoration: underline;
+  color: #ffc401;
+}

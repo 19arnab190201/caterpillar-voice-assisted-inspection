@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap");
+
+.cont {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.der {
+  width: 100%;
+  background-color: #e8e8e8;
+  padding: 2px 20px;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  position: fixed; /* Stick to the top of the page */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it's on top of other content */
+}
+
+.nbar {
+  max-width: 100%; /* Optional: Limit the width for better readability */
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loigi {
+  width: 60%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+.logitton {
+  font-family: "Raleway"; /* Apply Raleway font */
+  padding: 15px 50px; /* Increase the padding to increase the length */
+  font-size: 16px;
+  color: white;
+  background-color: #3a3a3a;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bodimage {
+  width: 80%; /* Make the image take up the full width of the body */
+  height: auto; /* Maintain the aspect ratio */
+  display: block; /* Ensure the image is displayed as a block-level element */
+  margin: 0 auto; /* Center the image horizontally */
+  padding-left: 50px;
+  transition: transform 0.6s ease; /* Add smooth animation */
+}
+
+.logitton:hover {
+  font-family: "Raleway"; /* Apply Raleway font */
+  font-weight: bold;
+  background-color: #ffc50c;
+  color: #3a3a3a;
+  transition: background-color 0.6s ease, color 0.6s ease; /* Add smooth animation */
+}
+.body-image-right {
+  position: absolute;
+  right: 5%; /* Adjust this value to move the image further right or left */
+  top: 55%; /* Adjust this value to position the image vertically */
+  transform: translateY(-50%); /* Center the image vertically */
+  width: 45%; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+}
+.get-started-button {
+  font-family: "Raleway"; /* Apply Raleway font */
+  display: flex;
+  align-items: center;
+  padding: 10px 90px;
+  border: 3px solid #ffc50c; /* Adjust color */
+  border-radius: 50px;
+  background-color: transparent;
+  font-size: 24px;
+  font-weight: bold;
+  color: #d3d3d3; /* Light gray text */
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  top: 300px;
+  right: 900px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.get-started-button:hover {
+  background-color: #faf9f5; /* Light yellow background on hover */
+  border-color: #d9d9d9; /* Change border color on hover */
+  color: #ffc50c; /* Change text color to yellow on hover */
+}
+
+.buttext {
+  flex-grow: 1;
+  padding-left: -20px;
+  position: relative;
+  right: 50px;
+}
+
+.arrocircle {
+  width: 50px;
+  height: 50px;
+  background-color: #d3d3d3; /* Light gray circle */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: -80px;
+  transition: background-color 0.3s ease;
+}
+
+.arro {
+  font-size: 20px;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.get-started-button:hover .arro {
+  transform: translateX(5px); /* Move arrow slightly right on hover */
+}
+
+.get-started-button:hover .arrocircle {
+  background-color: #ffc50c; /* Yellow circle background on hover */
+}
+/* Animation for the body image */
+.bodimage:hover {
+  transform: scale(1.05); /* Scale up the image on hover */
+}

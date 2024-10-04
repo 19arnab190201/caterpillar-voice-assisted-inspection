@@ -1,0 +1,7 @@
+.ant-segmented {
+  padding: 0px 16px !important;
+  background-color: #d9d9d9 !important;
+}
+.ant-segmented-group {
+  gap: 8px !important;
+}

@@ -10,21 +10,34 @@ import Login from "./pages/Login";
 import Inspection from "./pages/Inspection";
 import CreateInspection from "./pages/CreateInspection";
 import LoginPage from "./pages/LoginPage";
+import ReportPage from "./pages/ReportPage";
+import { ConfigProvider } from "antd";
 
 function App() {
   return (
     <UserContextProvider>
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/login2' element={<LoginPage />} />
-        <Route element={<ProtectedRoute />}>
-          <Route path='/dashboard' element={<DashboardPage />} />
-          <Route path='/profile' element={<ProfilePage />} />
-        </Route>
-        <Route path='/addinspection' element={<Inspection />} />
-        <Route path='/createinspection' element={<CreateInspection />} />
-      </Routes>
+      <ConfigProvider
+        theme={{
+          components: {
+            Segmented: {
+              itemActiveBg: "#F4C300",
+              itemSelectedBg: "#F4C300",
+              itemHoverBg: "#F4C300",
+            },
+          },
+        }}>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/login' element={<LoginPage />} />
+          <Route element={<ProtectedRoute />}>
+            <Route path='/dashboard' element={<DashboardPage />} />
+            <Route path='/profile' element={<ProfilePage />} />
+          </Route>
+          <Route path='/addinspection' element={<Inspection />} />
+          <Route path='/createinspection' element={<CreateInspection />} />
+          <Route path='/reports' element={<ReportPage />} />
+        </Routes>
+      </ConfigProvider>
     </UserContextProvider>
   );
 }

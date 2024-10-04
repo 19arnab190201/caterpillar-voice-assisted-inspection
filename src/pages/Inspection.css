@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+.main-title > * {
+  font-family: "Bebas Neue" !important;
+  font-style: normal;
+}
+.main-title {
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 88%;
+  /* or 77px */
+  letter-spacing: 0.04em;
+
+  color: #fac211;
+}
+.logo-container {
+  z-index: 2;
+  margin-top: 10px;
+  max-width: 160px;
+}
+.form-con {
+  display: flex;
+}
+.form-con svg {
+  width: 60px;
+}
+.form-con input {
+  padding: 20px;
+  padding-left: 5px;
+  border: none !important;
+  background-color: #fff;
+  outline: none;
+  font-size: 21px;
+}
+.form-con button {
+  background-color: #ffc50c !important;
+  color: #2f2f2f;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+}
+/* Transition for moving the search bar up */
+.search-move-up {
+  transform: translateY(-90px);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Transition for the result div to swipe up */
+.result-swipe-up {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.result-swipe-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}

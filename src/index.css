@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.machine-search-main {
+  background: url("./assets/bg.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(31, 31, 31, 0.49);
+  z-index: 1; /* Layer below the content */
+  backdrop-filter: blur(2px);
+}
+
+.content {
+  position: relative;
+  z-index: 2; /* Layer above the black overlay */
+}
